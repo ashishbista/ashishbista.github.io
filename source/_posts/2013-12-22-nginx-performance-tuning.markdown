@@ -6,24 +6,24 @@ comments: true
 categories: 
 ---
 
-Nginx is really capable of serving a huge number of traffic with very efficient latency. With the proper combination of hardware and software Nginx can handle 500,000 requests per second at 1,000 concurrent connections.
+Nginx is really capable of serving a huge number of requests with very efficient latency. With the proper combination of hardware and software Nginx can handle 500,000 requests per second at 1,000 concurrent connections.
 
-### Install the latest version of Nginx
+First, install the latest version of Nginx.
 
 `sudo add-apt-repository ppa:nginx/stable`
-Note: This command might not work on Ubuntu 12.10, if so run the following command:
+
+**Note:** This command might not work on Ubuntu 12.10, if so, run the following command:
+
 `sudo apt-get install software-properties-common`
 
-Update repositories with:
-`sudo apt-get update`
+Update repositories with:`sudo apt-get update`
 
-Install Nginx:
-`sudo apt-get install nginx`
+Install Nginx: `sudo apt-get install nginx`
 
 Now, backup the original configuration file and open `/etc/nginx/nginx.conf` with your favorite editor.
 
-`cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
-vim /etc/nginx/nginx.conf
+`cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig` and 
+`vim /etc/nginx/nginx.conf`
 
     # Basically, this number should match the number of cores on your system.
     # But, the latest version calculates it automatically.
@@ -35,7 +35,7 @@ vim /etc/nginx/nginx.conf
     worker_rlimit_nofile 100000;
 
     # Only log critical errors.
-    error_log /var/log/nginx/error.log crit
+    error_log /var/log/nginx/error.log crit;
 
     # To speed up IO disable access log
     access_log off;
