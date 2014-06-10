@@ -4,7 +4,7 @@
 
 url: http://ashishbista.github.io
 title: Ashish Bista
-subtitle: Rails and DevOps Developer.
+subtitle: Ruby/Rails Fanatic.
 author: Ashish Bista
 simple_search: http://google.com/search
 description:
@@ -71,6 +71,7 @@ github_skip_forks: true
 # Twitter
 twitter_user: poisonta03
 twitter_tweet_button: true
+twitter_tweet_button: true
 
 # Google +1
 google_plus_one: false
@@ -97,4 +98,4 @@ disqus_show_comment_count: false
 google_analytics_tracking_id: UA-46671942-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
