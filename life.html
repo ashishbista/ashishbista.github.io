@@ -1,0 +1,25 @@
+---
+layout: collection
+title: Life
+permalink: /life/
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for event in site.life %}
+      <li>
+        <span class="post-meta">{{ event.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ event.url | prepend: site.baseurl }}">{{ event.title }}</a>
+        </h2>
+      </li>
+      <div class="post-content" itemprop="articleBody">
+        {{ event.content }}
+      </div>
+
+    {% endfor %}
+  </ul>
+
+</div>
