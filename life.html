@@ -7,7 +7,7 @@ permalink: /life/
 <div class="home">
 
   <ul class="post-list">
-    {% for event in site.life %}
+    {% for event in site.life reversed %}
       <li>
         <span class="post-meta">{{ event.date | date: "%b %-d, %Y" }}</span>
 
