@@ -3,13 +3,12 @@ layout: page
 title: About
 permalink: /about/
 ---
+I'm a Software Developer from Nepal, currently based in New Jersey. I play with Ruby, Rails, AWS, Chef, Docker, and other cool technologies in my day-to-day life. I write here if I face any interesting stuffs in my job or life.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Besides technology, I'm passionate about music, place, and books. Please expect some posts in Nepali.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+{% include icon-github.html username="ashishbista" %}
+
+{% include icon-twitter.html username="poisonta03" %}
+
