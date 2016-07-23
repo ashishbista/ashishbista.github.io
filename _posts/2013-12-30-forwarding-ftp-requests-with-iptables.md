@@ -3,7 +3,7 @@ layout: post
 title: "Forwarding FTP Requests with iptables"
 date: 2013-12-30 21:00:25 +0545
 comments: true
-categories: ["iptables, active ftp"]
+categories: [iptables, active ftp]
 ---
 
 ### Problem Background:
