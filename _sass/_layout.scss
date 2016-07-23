@@ -187,6 +187,11 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    time {
+      padding-bottom: 8px;
+      display: inline-block;
+      vertical-align: middle;
+    }
 }
 
 .post-link {

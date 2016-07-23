@@ -9,9 +9,8 @@
 title: Ashish Bista
 email: poisonta03@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Software Developer by Profession, Passion & Obsession;
-  Hello, my name is Ashish Bista. This is my technical blog.
-  I'm into both Rails & DevOps. However, I believe in the potential of technology, not in tools.
+  Software Developer by Profession, Passion & Obsession &trade;;
+  I'm into Rails & DevOps.
 url: "http://ashishbista.com" # the base hostname & protocol for your site
 twitter_username: poisonta03
 github_username:  ashishbista
