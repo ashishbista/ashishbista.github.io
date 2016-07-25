@@ -19,27 +19,31 @@ Now start editing :
 
     # Basically, this number should match the number of cores on your system.
     # But, the latest version calculates it automatically.
-    worker_processes 12; # Assuming that you have 12 cores; Run 'nproc' to find out the number of cpu cores.
-
+    # Run 'nproc' to find out the number of cpu cores.
+    worker_processes 12; # Assuming that you have 12 cores
     # Number of file descriptors used for Nginx.
-    # This can be set in the OS with 'ulimit -n 20000' or using /etc/security/limits.conf.
+    # This can be set in the OS with 'ulimit -n 20000'
+    # or using /etc/security/limits.conf.
     # If you don't set it then OS settings will be used which is by default 2000.
     worker_rlimit_nofile 1000;
 
     # Only log critical errors.
     error_log /var/log/nginx/error.log crit;
 
-    # Provides the configuration file context in which the directives that affect connection processing are specified.
+    # Provides the configuration file context in which the directives
+    # that affect connection processing are specified.
     events {
         # Determines how many clients will be served by each worker process.
         # (Max clients = worker_connections * worker_processes)
-        # "Max clients" is also limited by the number of socket connections available on the system (~64k)
+        # "Max clients" is also limited by the number of socket connections
+        # available on the system (~64k)
         worker_connections 4000;
 
         # Optimized to serve many clients with each thread, essential for Linux
         use epoll;
 
-        # Accept as many connections as possible after Nginx gets the notification about a new connection.
+        # Accept as many connections as possible after Nginx gets the notification
+        # about a new connection.
         # May flood worker_connections, if that option is set too low.
         multi_accept on;
     }
@@ -57,11 +61,14 @@ Now start editing :
         open_file_cache_errors on;
 
         # Sendfile copies data between one FD and other from within the kernel.
-        # More efficient than read() + write(), since this requires transferring data to and from the user space.
+        # More efficient than read() + write(), since this requires transferring
+        # data to and from the user space.
         sendfile on;
 
-        # tcp_nopush causes Nginx to attempt to send its HTTP response head in one packet,
-        # Instead of using partial frames. This is useful for prepending headers before calling sendfile,
+        # tcp_nopush causes Nginx to attempt to send
+        # its HTTP response head in one packet,
+        # Instead of using partial frames.
+        # This is useful for prepending headers before calling sendfile,
         # or for throughput optimization.
         tcp_nopush on;
 
@@ -74,16 +81,20 @@ Now start editing :
         # Number of requests a client can make over the keep-alive connection.
         keepalive_requests 100000;
 
-        # Allow the server to close connection on non responding client, this will free up memory
+        # Allow the server to close connection on non responding client,
+        # this will free up memory
         reset_timedout_connection on;
 
-        # Send the client a "request timed out" if the body is not loaded by this time. Default is 60.
+        # Send the client a "request timed out"
+        # if the body is not loaded by this time.
+        # Default is 60.
         client_body_timeout 10;
 
         # If client stop responding, free up memory. Default is 60.
         send_timeout 2;
 
-        # Compression. Reduces the amount of data that needs to be transferred over the network.
+        # Compression. Reduces the amount of data that needs to be transferred
+        # over the network.
         gzip on;
         gzip_min_length 10240;
         gzip_proxied expired no-cache no-store private auth;
