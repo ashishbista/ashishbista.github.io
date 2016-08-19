@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running Rails RSpec Tests in Parallel using Docker"
-date: 2013-12-30 23:31:25 -0500
+date: 2016-08-15 23:31:25 -0500
 comments: true
 categories: [rails, rspec, tests, docker, ci]
 ---
