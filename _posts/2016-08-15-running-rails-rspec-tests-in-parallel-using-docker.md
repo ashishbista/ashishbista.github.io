@@ -34,7 +34,7 @@ ADD Gemfile.lock /app/code/Gemfile.lock
 RUN bundle install
 ```
 
-Now, `docker build -t docker-ci .` can be used to create a Docker image that containers will use. This command should be run from the directory where `Dockerfile` located. However, you can also specify the path of `Dockerfile` with an extra switch.
+Now, `docker build -t docker-ci .` can be used to create a Docker image that containers will use. This command should be run from the directory where `Dockerfile` is located. However, you can also specify the path of `Dockerfile` with an extra switch.
 
 ## One Shared Database Server
 
@@ -74,7 +74,7 @@ Each container will run a subset of tests that might require a separate database
 
 Of course, we don't want to run migrations from all containers because that will eventually hurt our main purpose. So, we'll copy the database schema using a template database.
 
-### Trick #2 Shared Spring
+### Trick #2 – Shared Spring
 
 Spring is one of the beautiful crafts that comes in Rails. It speeds up test run time by keeping the application running in the background. We will share a single Spring server for all containers. Cool, huh? If you don't believe, check `log/spring.log after or during test run.
 
