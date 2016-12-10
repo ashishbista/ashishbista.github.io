@@ -34,13 +34,13 @@ ADD Gemfile.lock /app/code/Gemfile.lock
 RUN bundle install
 ```
 
-Now, `docker build -t docker-ci .` can be used to create a Docker image that containers will use. This command should be run from the directory where `Dockerfile` is located. However, you can also specify the path of `Dockerfile` with an extra switch.
+Now, `docker build -t docker-ci .` can be used to create a Docker image that containers will use. This command should be run from the directory where `Dockerfile` is located. However, you can also specify the path of `Dockerfile` with `-f` switch.
 
 ## One Shared Database Server
 
 I presume you're also a big fan of PostgreSQL like me.
 
-For the sake of simplicity, let's use the same database server running on your laptop from containers. Docker containers will run tests on  behave of the `root`, and the same user can be used to make connections to the database server. So, we need to create the same role on PostgresSQL. 
+For the sake of simplicity, let's use the same database server running on your laptop from containers. Docker containers will run tests on behave of the `root` user, and the same user can be used to make connections to the database server. So, we need to create the same role on PostgresSQL.
 For that, run the following command:
 
 ```
@@ -76,7 +76,7 @@ Of course, we don't want to run migrations from all containers because that will
 
 ### Trick #2 – Shared Spring
 
-Spring is one of the beautiful crafts that comes in Rails. It speeds up test run time by keeping the application running in the background. We will share a single Spring server for all containers. Cool, huh? If you don't believe, check `log/spring.log after or during test run.
+Spring is one of the beautiful crafts that comes in Rails. It speeds up the test run time by keeping the application running in the background. We will share a single Spring server for all containers. Cool, huh? If you don't believe, check `log/spring.log after or during test run.
 
 Keeping these tricks in mind, let's create `bin/ci` with the following content:
 

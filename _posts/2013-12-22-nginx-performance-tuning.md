@@ -6,13 +6,13 @@ comments: true
 categories: [nginx, performance tuning]
 ---
 
-Nginx is remarkably capable of serving a huge number of requests with a very efficient latency. With the proper combination of hardware and software, Nginx can handle 500,000 requests per second at 1,000 concurrent connections.
+Nginx is remarkably capable of serving a huge number of requests with a very efficient latency. With the proper combination of hardware and software, Nginx can concurrently handle really a massive number of requests per second.
 
 First, you need to install the latest version of Nginx. Follow the official guild to install Nginx. [https://www.nginx.com/resources/wiki/start/topics/tutorials/install/](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
 
 Before moving forward, keep a backup of the original configuration file `cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig` 
 
-I've written inline comments on each configuration parameters that you need to optimize. Please go through each them and updated as per your requirements.
+I've written inline comments on each configuration parameters that you may need to optimize. Please go through each of them and update as per your requirements.
 
 Now start editing :
 `vim /etc/nginx/nginx.conf`

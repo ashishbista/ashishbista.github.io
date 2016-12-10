@@ -8,9 +8,9 @@ categories: [iptables, active ftp]
 
 ### Background:
 
-Normally, we don't want to assign public IP, floating IP in OpenStack terminology, to each server in our cloud just because of a couple of reasons — public (IPv4) Internet addresses are a scarce public resource, and exposing all servers to the Internet is a security concern. 
+Normally, we do not assign public IP, floating IP in OpenStack terminology, to each servers in our Cloud just because of a couple of reasons — public (IPv4) Internet addresses are a scarce public resource, and exposing all servers to the Internet is a security concern.
 
-For some purpose, within our OpenStack cloud, we had to install FTP server on a private instance and access it from outside of our cloud. We use an intermediate server (we call Route Server) to create a tunnel between our network and private servers. But, the FTP server has to be publicly accessible without establishing any tunnel. I used *iptables* to accomplish it.
+For some special purpose, within our OpenStack cloud, we wanted to install FTP server on a private instance and access it from outside of our cloud. We use an intermediate server (we call Route Server) to create a tunnel between our local network and private servers. But, the FTP server has to be publicly accessible without establishing any tunnel. I used *iptables* to accomplish it which I am describing in the subsequent sections.
 
 ### Solution:
 Setup FTP on a private server.
