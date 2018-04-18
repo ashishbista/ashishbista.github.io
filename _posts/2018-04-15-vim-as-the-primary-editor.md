@@ -121,7 +121,7 @@ Vim has everything that I wish in an editor. It even allows me to switch between
 
 Indeed, I keep learning Vim every day.
 
-<br /><hr/><em>Posted on <a href="https://utopian.io/utopian-io/@ashishbista/vim-as-the-primary-editor">Utopian.io -  Rewarding Open Source Contributors</a></em><hr/>
+
 
 
 
