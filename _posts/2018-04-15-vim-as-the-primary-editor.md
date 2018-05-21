@@ -119,7 +119,7 @@ I have additional Vim plugins cloned inside `~/.janus` directory. Janus automati
 
 Vim has everything that I wish in an editor. It even allows me to switch between the source file and the test file very easily. With the help of [Vroom](https://github.com/skalnik/vim-vroom), I run tests from it. This increases the productivity because of little context switching. The best part is I don't miss my favorite editor while I'm remotely logged in to a server through SSH.
 
-Indeed, I keep learning Vim every day.
+Having said this, I keep learning Vim every day.
 
 
 
